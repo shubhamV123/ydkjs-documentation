@@ -13,9 +13,9 @@ module.exports = {
       defaultLanguage: 'javascript',
     },
     navbar: {
-      title: 'YDJS',
+      title: 'YDKJS',
       logo: {
-        alt: 'YDJS Logo',
+        alt: 'YDKJS Logo',
         src: 'img/js.svg',
         srcDark: 'img/js.svg', // Default to `logo.src`.
       },
@@ -46,7 +46,9 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/shubhamV123/ydkjs-documentation',
+            'https://github.com/shubhamV123/ydkjs-documentation/edit/master/',
+          // showLastUpdateAuthor: true,
+          // showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
