@@ -1,0 +1,21 @@
+{
+  "name": "Ydkjs - Unofficial documentation",
+  "short_name": "ydkjs",
+  "description": "Ydkjs - Unofficial documentation of ydkjs book. This app is created only for learning",
+  "lang": "en-US",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/img/android-js-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/android-js-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

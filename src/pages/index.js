@@ -12,8 +12,8 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={` Unofficial ${siteConfig.title}`}
-      description="Reading from github is boring. So Created this documentation site to read those books.">
+      title={`Home`}
+      description="Reading from github is boring. So Created this unofficial documentation site to read those books.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
@@ -35,6 +35,18 @@ function Home() {
             </a></p>
         </div>
       </header>
+      <main className={styles.main}>
+        <section>
+          <div className="container text-center">
+            <h2>
+            This site is under progress. Please always read original source  <a
+              href="https://github.com/getify/You-Dont-Know-JS" className={styles.notifyURL} target="_blank">
+              here
+            </a>
+            </h2>
+          </div>
+        </section>
+      </main>
       
     </Layout>
   );
