@@ -8,19 +8,19 @@ I'll try my best to answer as soon as I can.
 2. Install dependencies using `yarn install`
 3. Start via `yarn` start
 
-
-
 ## How can I contribute?
 
 ### Improve documentation
+
 Currently documentation is not refined. There is scope of improvement in docs
 
 ### Add new feature
+
 If you feel like this module lacking some feature and you know how to do it. Feel free to raise the PR!
 
 ### Adding another book
 
-The reference of this site is from [this](https://github.com/getify/You-Dont-Know-JS). Currently its not completed. So if you want to add another chapter in this project. Simple go to `docs` folder and check book folder name exisit or not. 
+The reference of this site is from [this](https://github.com/getify/You-Dont-Know-JS). Currently its not completed. So if you want to add another chapter in this project. Simple go to `docs` folder and check book folder name exisit or not.
 
 Currently this project using this pattern:
 
@@ -33,14 +33,22 @@ id: bigger-picture
 title: The Bigger Picture
 hide_title: true
 ---
-
 ```
 
-and after that also add in `sidebar.js` . This will let know `docusaurus` to add in side bar. For example: 
+and after that also add in `sidebar.js` . This will let know `docusaurus` to add in side bar. For example:
 
 ```js
 
 "bookName":[...,'get-started/bigger-picture'] <- It means add document which is inside `docs/get-started`
 
 ```
+
 Also `sidebarjs` array also works as pagination so make sure you added as per original book source
+
+Also in bottom of footer also add orial author source like this:
+
+```
+### Original Source
+
+You can read original author source from [here](ChapterURl)
+```

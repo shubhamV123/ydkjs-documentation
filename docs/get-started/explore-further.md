@@ -4,9 +4,8 @@ title: Exploring Further
 hide_title: true
 ---
 
-
-
 # You Don't Know JS Yet: Get Started - 2nd Edition
+
 # Appendix A: Exploring Further
 
 In this appendix, we're going to explore some topics from the main chapter text in a bit more detail. Think of this content as an optional preview of some of the more nuanced details covered throughout the rest of the book series.
@@ -51,9 +50,9 @@ Consider:
 
 ```js
 var myAddress = {
-    street: "123 JS Blvd",
-    city: "Austin",
-    state: "TX"
+  street: "123 JS Blvd",
+  city: "Austin",
+  state: "TX",
 };
 
 var yourAddress = myAddress;
@@ -74,13 +73,13 @@ Again, JS chooses the value-copy vs. reference-copy behavior based on the value 
 Recall this snippet from the "Functions" section in Chapter 2:
 
 ```js
-var awesomeFunction = function(coolThings) {
-    // ..
-    return amazingStuff;
+var awesomeFunction = function (coolThings) {
+  // ..
+  return amazingStuff;
 };
 ```
 
-The function expression here is referred to as an *anonymous function expression*, since it has no name identifier between the `function` keyword and the `(..)` parameter list. This point confuses many JS developers because as of ES6, JS performs a "name inference" on an anonymous function:
+The function expression here is referred to as an _anonymous function expression_, since it has no name identifier between the `function` keyword and the `(..)` parameter list. This point confuses many JS developers because as of ES6, JS performs a "name inference" on an anonymous function:
 
 ```js
 awesomeFunction.name;
@@ -89,7 +88,7 @@ awesomeFunction.name;
 
 The `name` property of a function will reveal either its directly given name (in the case of a declaration) or its inferred name in the case of an anonymous function expression. That value is generally used by developer tools when inspecting a function value or when reporting an error stack trace.
 
-So even an anonymous function expression *might* get a name. However, name inference only happens in limited cases such as when the function expression is assigned (with `=`). If you pass a function expression as an argument to a function call, for example, no name inference occurs; the `name` property will be an empty string, and the developer console will usually report "(anonymous function)".
+So even an anonymous function expression _might_ get a name. However, name inference only happens in limited cases such as when the function expression is assigned (with `=`). If you pass a function expression as an argument to a function call, for example, no name inference occurs; the `name` property will be an empty string, and the developer console will usually report "(anonymous function)".
 
 Even if a name is inferred, **it's still an anonymous function.** Why? Because the inferred name is a metadata string value, not an available identifier to refer to the function. An anonymous function doesn't have an identifier to use to refer to itself from inside itself—for recursion, event unbinding, etc.
 
@@ -99,23 +98,23 @@ Compare the anonymous function expression form to:
 // let awesomeFunction = ..
 // const awesomeFunction = ..
 var awesomeFunction = function someName(coolThings) {
-    // ..
-    return amazingStuff;
+  // ..
+  return amazingStuff;
 };
 
 awesomeFunction.name;
 // "someName"
 ```
 
-This function expression is a *named function expression*, since the identifier `someName` is directly associated with the function expression at compile time; the association with the identifier `awesomeFunction` still doesn't happen until runtime at the time of that statement. Those two identifiers don't have to match; sometimes it makes sense to have them be different, other times it's better to have them be the same.
+This function expression is a _named function expression_, since the identifier `someName` is directly associated with the function expression at compile time; the association with the identifier `awesomeFunction` still doesn't happen until runtime at the time of that statement. Those two identifiers don't have to match; sometimes it makes sense to have them be different, other times it's better to have them be the same.
 
-Notice also that the explicit function name, the identifier `someName`, takes precedence when assigning a *name* for the `name` property.
+Notice also that the explicit function name, the identifier `someName`, takes precedence when assigning a _name_ for the `name` property.
 
 Should function expressions be named or anonymous? Opinions vary widely on this. Most developers tend to be unconcerned with using anonymous functions. They're shorter, and unquestionably more common in the broad sphere of JS code out there.
 
 In my opinion, if a function exists in your program, it has a purpose; otherwise, take it out! And if it has a purpose, it has a natural name that describes that purpose.
 
-If a function has a name, you the code author should include that name in the code, so that the reader does not have to infer that name from reading and mentally executing that function's source code. Even a trivial function body like `x * 2` has to be read to infer a name like "double" or "multBy2"; that brief extra mental work is unnecessary when you could just take a second to name the function "double" or "multBy2" *once*, saving the reader that repeated mental work every time it's read in the future.
+If a function has a name, you the code author should include that name in the code, so that the reader does not have to infer that name from reading and mentally executing that function's source code. Even a trivial function body like `x * 2` has to be read to infer a name like "double" or "multBy2"; that brief extra mental work is unnecessary when you could just take a second to name the function "double" or "multBy2" _once_, saving the reader that repeated mental work every time it's read in the future.
 
 There are, regrettably in some respects, many other function definition forms in JS as of early 2020 (maybe more in the future!).
 
@@ -201,12 +200,12 @@ Consider:
 var x = 1;
 
 if (x) {
-    // will run!
+  // will run!
 }
 
 while (x) {
-    // will run, once!
-    x = false;
+  // will run, once!
+  x = false;
 }
 ```
 
@@ -216,12 +215,12 @@ You might think of these `(x)` conditional expressions like this:
 var x = 1;
 
 if (x == true) {
-    // will run!
+  // will run!
 }
 
 while (x == true) {
-    // will run, once!
-    x = false;
+  // will run, once!
+  x = false;
 }
 ```
 
@@ -231,11 +230,11 @@ In this specific case -- the value of `x` being `1` -- that mental model works, 
 var x = "hello";
 
 if (x) {
-    // will run!
+  // will run!
 }
 
 if (x == true) {
-    // won't run :(
+  // won't run :(
 }
 ```
 
@@ -245,13 +244,13 @@ Oops. So what is the `if` statement actually doing? This is the more accurate me
 var x = "hello";
 
 if (Boolean(x) == true) {
-    // will run
+  // will run
 }
 
 // which is the same as:
 
 if (Boolean(x) === true) {
-    // will run
+  // will run
 }
 ```
 
@@ -265,17 +264,17 @@ In Chapter 3, we introduced prototypes and showed how we can link objects throug
 
 Another way of wiring up such prototype linkages served as the (honestly, ugly) predecessor to the elegance of the ES6 `class` system (see Chapter 2, "Classes"), and is referred to as prototypal classes.
 
-| TIP: |
-| :--- |
+| TIP:                                                                                                                                       |
+| :----------------------------------------------------------------------------------------------------------------------------------------- |
 | While this style of code is quite uncommon in JS these days, it's still perplexingly rather common to be asked about it in job interviews! |
 
 Let's first recall the `Object.create(..)` style of coding:
 
 ```js
 var Classroom = {
-    welcome() {
-        console.log("Welcome, students!");
-    }
+  welcome() {
+    console.log("Welcome, students!");
+  },
 };
 
 var mathClass = Object.create(Classroom);
@@ -290,11 +289,11 @@ The prototypal class pattern would have labeled this delegation behavior "inheri
 
 ```js
 function Classroom() {
-    // ..
+  // ..
 }
 
 Classroom.prototype.welcome = function hello() {
-    console.log("Welcome, students!");
+  console.log("Welcome, students!");
 };
 
 var mathClass = new Classroom();
@@ -303,7 +302,7 @@ mathClass.welcome();
 // Welcome, students!
 ```
 
-All functions by default reference an empty object at a property named `prototype`. Despite the confusing naming, this is **not** the function's *prototype* (where the function is prototype linked to), but rather the prototype object to *link to* when other objects are created by calling the function with `new`.
+All functions by default reference an empty object at a property named `prototype`. Despite the confusing naming, this is **not** the function's _prototype_ (where the function is prototype linked to), but rather the prototype object to _link to_ when other objects are created by calling the function with `new`.
 
 We add a `welcome` property on that empty object (called `Classroom.prototype`), pointing at the `hello()` function.
 
@@ -315,13 +314,13 @@ This "prototypal class" pattern is now strongly discouraged, in favor of using E
 
 ```js
 class Classroom {
-    constructor() {
-        // ..
-    }
+  constructor() {
+    // ..
+  }
 
-    welcome() {
-        console.log("Welcome, students!");
-    }
+  welcome() {
+    console.log("Welcome, students!");
+  }
 }
 
 var mathClass = new Classroom();
@@ -331,3 +330,7 @@ mathClass.welcome();
 ```
 
 Under the covers, the same prototype linkage is wired up, but this `class` syntax fits the class-oriented design pattern much more cleanly than "prototypal classes".
+
+### Original Source
+
+You can read original author source from [here](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/apA.md)
