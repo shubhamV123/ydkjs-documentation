@@ -41,5 +41,7 @@
       "type":"image/png",
       "purpose":"any maskable"
     }
-  ]
+  ],
+  "background-color":"#ffffff",
+  "theme-color":"#25c2a0"
 }
