@@ -42,6 +42,6 @@
       "purpose":"any maskable"
     }
   ],
-  "background-color":"#ffffff",
-  "theme-color":"#25c2a0"
+  "background_color":"#ffffff",
+  "theme_color":"#25c2a0"
 }
