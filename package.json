@@ -9,7 +9,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "release": "release-it"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.68",
@@ -41,6 +42,7 @@
     "dotenv": "^8.2.0",
     "husky": "^4.3.0",
     "prettier": "^2.2.0",
-    "pretty-quick": "^3.1.0"
+    "pretty-quick": "^3.1.0",
+    "release-it": "^14.2.2"
   }
 }
