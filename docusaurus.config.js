@@ -1,6 +1,4 @@
 require("dotenv").config();
-
-console.log(process.env);
 module.exports = {
   title: `You don't know js unoffical`,
   tagline:
