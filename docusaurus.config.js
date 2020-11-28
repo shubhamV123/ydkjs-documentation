@@ -1,3 +1,6 @@
+require("dotenv").config();
+
+console.log(process.env);
 module.exports = {
   title: `You don't know js unoffical`,
   tagline:
@@ -10,6 +13,12 @@ module.exports = {
   organizationName: "Shubham Verma", // Usually your GitHub org/user name.
   projectName: "ydkjs-documentation", // Usually your repo name.
   themeConfig: {
+    ...(process.env.NODE_ENV === "production" && {
+      algolia: {
+        indexName: "ydkjs-documentation",
+        apiKey: process.env.ALGOLIA,
+      },
+    }),
     prism: {
       defaultLanguage: "javascript",
     },
@@ -46,6 +55,17 @@ module.exports = {
     rel="noopener noreferrer">Icon8</a></div>`,
     },
   },
+  scripts: [
+    {
+      src:
+        "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
+      async: true,
+      type: "text/javascript",
+    },
+  ],
+  stylesheets: [
+    "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css",
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
