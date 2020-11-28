@@ -72,11 +72,6 @@ module.exports = {
         pwaHead: [
           {
             tagName: "link",
-            rel: "icon",
-            href: "/img/android-js-192x192.png",
-          },
-          {
-            tagName: "link",
             rel: "manifest",
             href: "/manifest.json", // your PWA manifest
           },
@@ -84,6 +79,11 @@ module.exports = {
             tagName: "meta",
             name: "theme-color",
             content: "rgb(37, 194, 160)",
+          },
+          {
+            tagName: "link",
+            rel: "apple-touch-icon",
+            href: "/img/apple-touch-icon.png",
           },
         ],
       },
