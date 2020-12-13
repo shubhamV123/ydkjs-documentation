@@ -4,8 +4,6 @@ title: Digging to the Roots of JS
 hide_title: true
 ---
 
-# You Don't Know JS Yet: Get Started - 2nd Edition
-
 # Chapter 3: Digging to the Roots of JS
 
 If you've read Chapters 1 and 2, and taken the time to digest and percolate, you're hopefully starting to _get_ JS a little more. If you skipped/skimmed them (especially Chapter 2), I recommend going back to spend some more time with that material.
@@ -388,7 +386,7 @@ The first argument to `Object.create(..)` specifies an object to link the newly 
 Figure 4 shows how the three objects (`otherHomework`, `homework`, and `Object.prototype`) are linked in a prototype chain:
 
 <figure>
-    <img src="/getting-started/images/fig4.svg" width="200" alt="Prototype chain with 3 objects" align="center" />
+    <img src="/get-started/fig4.svg" width="200" alt="Prototype chain with 3 objects" align="center" />
     <figcaption><em>Fig. 4: Objects in a prototype chain</em></figcaption>
     <br/>
 </figure>
@@ -421,7 +419,7 @@ The assignment to `topic` creates a property of that name directly on `otherHome
 Figure 5 shows the objects/properties after the assignment that creates the `otherHomework.topic` property:
 
 <figure>
-    <img src="/getting-started/images/fig5.svg" width="200" alt="3 objects linked, with shadowed property" align="center"/>
+    <img src="/get-started/fig5.svg" width="200" alt="3 objects linked, with shadowed property" align="center"/>
     <figcaption><em>Fig. 5: Shadowed property 'topic'</em></figcaption>
     <br/>
 </figure>
@@ -459,7 +457,7 @@ mathHomework.study();
 The two objects `jsHomework` and `mathHomework` each prototype link to the single `homework` object, which has the `study()` function. `jsHomework` and `mathHomework` are each given their own `topic` property (see Figure 6).
 
 <figure>
-    <img src="/getting-started/images/fig6.svg" width="495" alt="4 objects prototype linked" align="center"/>
+    <img src="/get-started/fig6.svg" width="495" alt="4 objects prototype linked" align="center"/>
     <figcaption><em>Fig. 6: Two objects linked to a common parent</em></figcaption>
     <br/>
 </figure>

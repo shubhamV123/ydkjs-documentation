@@ -5,8 +5,6 @@ slug: /
 hide_title: true
 ---
 
-# You Don't Know JS Yet: Get Started - 2nd Edition
-
 # Chapter 1: What _Is_ JavaScript?
 
 You don't know JS, yet. Neither do I, not fully anyway. None of us do. But we can all start getting to know JS better.
@@ -325,7 +323,7 @@ These misinformed claims and criticisms should be set aside. The real reason it 
 Historically, scripted or interpreted languages were executed in generally a top-down and line-by-line fashion; there's typically not an initial pass through the program to process it before execution begins (see Figure 1).
 
 <figure>
-    <img src="/getting-started/images/fig1.svg" width="650" alt="Interpreting a script to execute it" align="center"/>
+    <img src="/get-started/fig1.svg" width="650" alt="Interpreting a script to execute it" align="center"/>
     <figcaption><em>Fig. 1: Interpreted/Scripted Execution</em></figcaption>
     <br/>
 </figure>
@@ -335,7 +333,7 @@ In scripted or interpreted languages, an error on line 5 of a program won't be d
 Compare that to languages which do go through a processing step (typically, called parsing) before any execution occurs, as illustrated in Figure 2:
 
 <figure>
-    <img src="/getting-started/images/fig2.svg" width="650" alt="Parsing, compiling, and executing a program" align="center"/>
+    <img src="/get-started/fig2.svg" width="650" alt="Parsing, compiling, and executing a program" align="center"/>
     <figcaption><em>Fig. 2: Parsing + Compilation + Execution</em></figcaption>
     <br/>
 </figure>
@@ -373,7 +371,7 @@ So what do these nitty-gritty details boil down to? Step back and consider the e
 To visualize those steps, again:
 
 <figure>
-    <img src="/getting-started/images/fig3.svg" width="650" alt="Steps of JS compilation and execution" align="center"/>
+    <img src="/get-started/fig3.svg" width="650" alt="Steps of JS compilation and execution" align="center"/>
     <figcaption><em>Fig. 3: Parsing, Compiling, and Executing JS</em></figcaption>
     <br/>
 </figure>

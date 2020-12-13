@@ -4,8 +4,6 @@ title: Surveying JS
 hide_title: true
 ---
 
-# You Don't Know JS Yet: Get Started - 2nd Edition
-
 # Chapter 2: Surveying JS
 
 The best way to learn JS is to start writing JS.
